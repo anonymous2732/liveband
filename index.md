@@ -4,13 +4,12 @@ layout: page
 
 <style>
 .demo-table-wrap {
-  overflow-x: auto;
+  overflow-x: visible;
 }
 
 .demo-table {
   border-collapse: collapse;
-  min-width: 960px;
-  table-layout: fixed;
+  table-layout: auto;
   width: 100%;
 }
 
@@ -25,9 +24,17 @@ layout: page
   width: 100%;
 }
 
+.demo-table th {
+  white-space: nowrap;
+}
+
 .sample-col {
   font-weight: 600;
   width: 4rem;
+}
+
+.pad-col {
+  width: 1rem;
 }
 </style>
 
@@ -223,7 +230,7 @@ We compare the internal LiveBand model (0.1s anticipation) with Slakh2100-traine
 <div class="demo-table-wrap">
 <table class="demo-table">
   <tr>
-    <th class="sample-col">Sample</th>
+    <th class="sample-col" rowspan="2">Sample</th>
     <th>Input Mix</th>
     <th>GT Stem</th>
     <th>GT Mix (L=Input, R=GT)</th>
@@ -231,15 +238,18 @@ We compare the internal LiveBand model (0.1s anticipation) with Slakh2100-traine
     <th>Internal Mix</th>
     <th>LiveBand 0s Gen</th>
     <th>LiveBand 0s Mix</th>
+  </tr>
+  <tr>
     <th>LiveBand 0.1s Gen</th>
     <th>LiveBand 0.1s Mix</th>
     <th>LiveBand 1s Gen</th>
     <th>LiveBand 1s Mix</th>
     <th>LiveBand Bidir Gen</th>
     <th>LiveBand Bidir Mix</th>
+    <th class="pad-col"></th>
   </tr>
   <tr>
-    <td class="sample-col">01</td>
+    <td class="sample-col" rowspan="2">01</td>
     <td><audio src="audio/liveband_comparison/00119/input_mix.mp3" controls></audio></td>
     <td><audio src="audio/liveband_comparison/00119/gt_stem.mp3" controls></audio></td>
     <td><audio src="audio/liveband_comparison/00119/gt_mix_lr.mp3" controls></audio></td>
@@ -247,15 +257,18 @@ We compare the internal LiveBand model (0.1s anticipation) with Slakh2100-traine
     <td><audio src="audio/liveband_comparison/00119/internal_mix_lr.mp3" controls></audio></td>
     <td><audio src="audio/liveband_comparison/00119/lb0_gen.mp3" controls></audio></td>
     <td><audio src="audio/liveband_comparison/00119/lb0_mix_lr.mp3" controls></audio></td>
+  </tr>
+  <tr>
     <td><audio src="audio/liveband_comparison/00119/lb01_gen.mp3" controls></audio></td>
     <td><audio src="audio/liveband_comparison/00119/lb01_mix_lr.mp3" controls></audio></td>
     <td><audio src="audio/liveband_comparison/00119/lb1_gen.mp3" controls></audio></td>
     <td><audio src="audio/liveband_comparison/00119/lb1_mix_lr.mp3" controls></audio></td>
     <td><audio src="audio/liveband_comparison/00119/lbbidir_gen.mp3" controls></audio></td>
     <td><audio src="audio/liveband_comparison/00119/lbbidir_mix_lr.mp3" controls></audio></td>
+    <td class="pad-col"></td>
   </tr>
   <tr>
-    <td class="sample-col">02</td>
+    <td class="sample-col" rowspan="2">02</td>
     <td><audio src="audio/liveband_comparison/00486/input_mix.mp3" controls></audio></td>
     <td><audio src="audio/liveband_comparison/00486/gt_stem.mp3" controls></audio></td>
     <td><audio src="audio/liveband_comparison/00486/gt_mix_lr.mp3" controls></audio></td>
@@ -263,15 +276,18 @@ We compare the internal LiveBand model (0.1s anticipation) with Slakh2100-traine
     <td><audio src="audio/liveband_comparison/00486/internal_mix_lr.mp3" controls></audio></td>
     <td><audio src="audio/liveband_comparison/00486/lb0_gen.mp3" controls></audio></td>
     <td><audio src="audio/liveband_comparison/00486/lb0_mix_lr.mp3" controls></audio></td>
+  </tr>
+  <tr>
     <td><audio src="audio/liveband_comparison/00486/lb01_gen.mp3" controls></audio></td>
     <td><audio src="audio/liveband_comparison/00486/lb01_mix_lr.mp3" controls></audio></td>
     <td><audio src="audio/liveband_comparison/00486/lb1_gen.mp3" controls></audio></td>
     <td><audio src="audio/liveband_comparison/00486/lb1_mix_lr.mp3" controls></audio></td>
     <td><audio src="audio/liveband_comparison/00486/lbbidir_gen.mp3" controls></audio></td>
     <td><audio src="audio/liveband_comparison/00486/lbbidir_mix_lr.mp3" controls></audio></td>
+    <td class="pad-col"></td>
   </tr>
   <tr>
-    <td class="sample-col">03</td>
+    <td class="sample-col" rowspan="2">03</td>
     <td><audio src="audio/liveband_comparison/00369/input_mix.mp3" controls></audio></td>
     <td><audio src="audio/liveband_comparison/00369/gt_stem.mp3" controls></audio></td>
     <td><audio src="audio/liveband_comparison/00369/gt_mix_lr.mp3" controls></audio></td>
@@ -279,15 +295,18 @@ We compare the internal LiveBand model (0.1s anticipation) with Slakh2100-traine
     <td><audio src="audio/liveband_comparison/00369/internal_mix_lr.mp3" controls></audio></td>
     <td><audio src="audio/liveband_comparison/00369/lb0_gen.mp3" controls></audio></td>
     <td><audio src="audio/liveband_comparison/00369/lb0_mix_lr.mp3" controls></audio></td>
+  </tr>
+  <tr>
     <td><audio src="audio/liveband_comparison/00369/lb01_gen.mp3" controls></audio></td>
     <td><audio src="audio/liveband_comparison/00369/lb01_mix_lr.mp3" controls></audio></td>
     <td><audio src="audio/liveband_comparison/00369/lb1_gen.mp3" controls></audio></td>
     <td><audio src="audio/liveband_comparison/00369/lb1_mix_lr.mp3" controls></audio></td>
     <td><audio src="audio/liveband_comparison/00369/lbbidir_gen.mp3" controls></audio></td>
     <td><audio src="audio/liveband_comparison/00369/lbbidir_mix_lr.mp3" controls></audio></td>
+    <td class="pad-col"></td>
   </tr>
   <tr>
-    <td class="sample-col">04</td>
+    <td class="sample-col" rowspan="2">04</td>
     <td><audio src="audio/liveband_comparison/00781/input_mix.mp3" controls></audio></td>
     <td><audio src="audio/liveband_comparison/00781/gt_stem.mp3" controls></audio></td>
     <td><audio src="audio/liveband_comparison/00781/gt_mix_lr.mp3" controls></audio></td>
@@ -295,15 +314,18 @@ We compare the internal LiveBand model (0.1s anticipation) with Slakh2100-traine
     <td><audio src="audio/liveband_comparison/00781/internal_mix_lr.mp3" controls></audio></td>
     <td><audio src="audio/liveband_comparison/00781/lb0_gen.mp3" controls></audio></td>
     <td><audio src="audio/liveband_comparison/00781/lb0_mix_lr.mp3" controls></audio></td>
+  </tr>
+  <tr>
     <td><audio src="audio/liveband_comparison/00781/lb01_gen.mp3" controls></audio></td>
     <td><audio src="audio/liveband_comparison/00781/lb01_mix_lr.mp3" controls></audio></td>
     <td><audio src="audio/liveband_comparison/00781/lb1_gen.mp3" controls></audio></td>
     <td><audio src="audio/liveband_comparison/00781/lb1_mix_lr.mp3" controls></audio></td>
     <td><audio src="audio/liveband_comparison/00781/lbbidir_gen.mp3" controls></audio></td>
     <td><audio src="audio/liveband_comparison/00781/lbbidir_mix_lr.mp3" controls></audio></td>
+    <td class="pad-col"></td>
   </tr>
   <tr>
-    <td class="sample-col">05</td>
+    <td class="sample-col" rowspan="2">05</td>
     <td><audio src="audio/liveband_comparison/00293/input_mix.mp3" controls></audio></td>
     <td><audio src="audio/liveband_comparison/00293/gt_stem.mp3" controls></audio></td>
     <td><audio src="audio/liveband_comparison/00293/gt_mix_lr.mp3" controls></audio></td>
@@ -311,15 +333,18 @@ We compare the internal LiveBand model (0.1s anticipation) with Slakh2100-traine
     <td><audio src="audio/liveband_comparison/00293/internal_mix_lr.mp3" controls></audio></td>
     <td><audio src="audio/liveband_comparison/00293/lb0_gen.mp3" controls></audio></td>
     <td><audio src="audio/liveband_comparison/00293/lb0_mix_lr.mp3" controls></audio></td>
+  </tr>
+  <tr>
     <td><audio src="audio/liveband_comparison/00293/lb01_gen.mp3" controls></audio></td>
     <td><audio src="audio/liveband_comparison/00293/lb01_mix_lr.mp3" controls></audio></td>
     <td><audio src="audio/liveband_comparison/00293/lb1_gen.mp3" controls></audio></td>
     <td><audio src="audio/liveband_comparison/00293/lb1_mix_lr.mp3" controls></audio></td>
     <td><audio src="audio/liveband_comparison/00293/lbbidir_gen.mp3" controls></audio></td>
     <td><audio src="audio/liveband_comparison/00293/lbbidir_mix_lr.mp3" controls></audio></td>
+    <td class="pad-col"></td>
   </tr>
   <tr>
-    <td class="sample-col">06</td>
+    <td class="sample-col" rowspan="2">06</td>
     <td><audio src="audio/liveband_comparison/00142/input_mix.mp3" controls></audio></td>
     <td><audio src="audio/liveband_comparison/00142/gt_stem.mp3" controls></audio></td>
     <td><audio src="audio/liveband_comparison/00142/gt_mix_lr.mp3" controls></audio></td>
@@ -327,15 +352,18 @@ We compare the internal LiveBand model (0.1s anticipation) with Slakh2100-traine
     <td><audio src="audio/liveband_comparison/00142/internal_mix_lr.mp3" controls></audio></td>
     <td><audio src="audio/liveband_comparison/00142/lb0_gen.mp3" controls></audio></td>
     <td><audio src="audio/liveband_comparison/00142/lb0_mix_lr.mp3" controls></audio></td>
+  </tr>
+  <tr>
     <td><audio src="audio/liveband_comparison/00142/lb01_gen.mp3" controls></audio></td>
     <td><audio src="audio/liveband_comparison/00142/lb01_mix_lr.mp3" controls></audio></td>
     <td><audio src="audio/liveband_comparison/00142/lb1_gen.mp3" controls></audio></td>
     <td><audio src="audio/liveband_comparison/00142/lb1_mix_lr.mp3" controls></audio></td>
     <td><audio src="audio/liveband_comparison/00142/lbbidir_gen.mp3" controls></audio></td>
     <td><audio src="audio/liveband_comparison/00142/lbbidir_mix_lr.mp3" controls></audio></td>
+    <td class="pad-col"></td>
   </tr>
   <tr>
-    <td class="sample-col">07</td>
+    <td class="sample-col" rowspan="2">07</td>
     <td><audio src="audio/liveband_comparison/00095/input_mix.mp3" controls></audio></td>
     <td><audio src="audio/liveband_comparison/00095/gt_stem.mp3" controls></audio></td>
     <td><audio src="audio/liveband_comparison/00095/gt_mix_lr.mp3" controls></audio></td>
@@ -343,15 +371,18 @@ We compare the internal LiveBand model (0.1s anticipation) with Slakh2100-traine
     <td><audio src="audio/liveband_comparison/00095/internal_mix_lr.mp3" controls></audio></td>
     <td><audio src="audio/liveband_comparison/00095/lb0_gen.mp3" controls></audio></td>
     <td><audio src="audio/liveband_comparison/00095/lb0_mix_lr.mp3" controls></audio></td>
+  </tr>
+  <tr>
     <td><audio src="audio/liveband_comparison/00095/lb01_gen.mp3" controls></audio></td>
     <td><audio src="audio/liveband_comparison/00095/lb01_mix_lr.mp3" controls></audio></td>
     <td><audio src="audio/liveband_comparison/00095/lb1_gen.mp3" controls></audio></td>
     <td><audio src="audio/liveband_comparison/00095/lb1_mix_lr.mp3" controls></audio></td>
     <td><audio src="audio/liveband_comparison/00095/lbbidir_gen.mp3" controls></audio></td>
     <td><audio src="audio/liveband_comparison/00095/lbbidir_mix_lr.mp3" controls></audio></td>
+    <td class="pad-col"></td>
   </tr>
   <tr>
-    <td class="sample-col">08</td>
+    <td class="sample-col" rowspan="2">08</td>
     <td><audio src="audio/liveband_comparison/00760/input_mix.mp3" controls></audio></td>
     <td><audio src="audio/liveband_comparison/00760/gt_stem.mp3" controls></audio></td>
     <td><audio src="audio/liveband_comparison/00760/gt_mix_lr.mp3" controls></audio></td>
@@ -359,15 +390,18 @@ We compare the internal LiveBand model (0.1s anticipation) with Slakh2100-traine
     <td><audio src="audio/liveband_comparison/00760/internal_mix_lr.mp3" controls></audio></td>
     <td><audio src="audio/liveband_comparison/00760/lb0_gen.mp3" controls></audio></td>
     <td><audio src="audio/liveband_comparison/00760/lb0_mix_lr.mp3" controls></audio></td>
+  </tr>
+  <tr>
     <td><audio src="audio/liveband_comparison/00760/lb01_gen.mp3" controls></audio></td>
     <td><audio src="audio/liveband_comparison/00760/lb01_mix_lr.mp3" controls></audio></td>
     <td><audio src="audio/liveband_comparison/00760/lb1_gen.mp3" controls></audio></td>
     <td><audio src="audio/liveband_comparison/00760/lb1_mix_lr.mp3" controls></audio></td>
     <td><audio src="audio/liveband_comparison/00760/lbbidir_gen.mp3" controls></audio></td>
     <td><audio src="audio/liveband_comparison/00760/lbbidir_mix_lr.mp3" controls></audio></td>
+    <td class="pad-col"></td>
   </tr>
   <tr>
-    <td class="sample-col">09</td>
+    <td class="sample-col" rowspan="2">09</td>
     <td><audio src="audio/liveband_comparison/00429/input_mix.mp3" controls></audio></td>
     <td><audio src="audio/liveband_comparison/00429/gt_stem.mp3" controls></audio></td>
     <td><audio src="audio/liveband_comparison/00429/gt_mix_lr.mp3" controls></audio></td>
@@ -375,15 +409,18 @@ We compare the internal LiveBand model (0.1s anticipation) with Slakh2100-traine
     <td><audio src="audio/liveband_comparison/00429/internal_mix_lr.mp3" controls></audio></td>
     <td><audio src="audio/liveband_comparison/00429/lb0_gen.mp3" controls></audio></td>
     <td><audio src="audio/liveband_comparison/00429/lb0_mix_lr.mp3" controls></audio></td>
+  </tr>
+  <tr>
     <td><audio src="audio/liveband_comparison/00429/lb01_gen.mp3" controls></audio></td>
     <td><audio src="audio/liveband_comparison/00429/lb01_mix_lr.mp3" controls></audio></td>
     <td><audio src="audio/liveband_comparison/00429/lb1_gen.mp3" controls></audio></td>
     <td><audio src="audio/liveband_comparison/00429/lb1_mix_lr.mp3" controls></audio></td>
     <td><audio src="audio/liveband_comparison/00429/lbbidir_gen.mp3" controls></audio></td>
     <td><audio src="audio/liveband_comparison/00429/lbbidir_mix_lr.mp3" controls></audio></td>
+    <td class="pad-col"></td>
   </tr>
   <tr>
-    <td class="sample-col">10</td>
+    <td class="sample-col" rowspan="2">10</td>
     <td><audio src="audio/liveband_comparison/00220/input_mix.mp3" controls></audio></td>
     <td><audio src="audio/liveband_comparison/00220/gt_stem.mp3" controls></audio></td>
     <td><audio src="audio/liveband_comparison/00220/gt_mix_lr.mp3" controls></audio></td>
@@ -391,15 +428,18 @@ We compare the internal LiveBand model (0.1s anticipation) with Slakh2100-traine
     <td><audio src="audio/liveband_comparison/00220/internal_mix_lr.mp3" controls></audio></td>
     <td><audio src="audio/liveband_comparison/00220/lb0_gen.mp3" controls></audio></td>
     <td><audio src="audio/liveband_comparison/00220/lb0_mix_lr.mp3" controls></audio></td>
+  </tr>
+  <tr>
     <td><audio src="audio/liveband_comparison/00220/lb01_gen.mp3" controls></audio></td>
     <td><audio src="audio/liveband_comparison/00220/lb01_mix_lr.mp3" controls></audio></td>
     <td><audio src="audio/liveband_comparison/00220/lb1_gen.mp3" controls></audio></td>
     <td><audio src="audio/liveband_comparison/00220/lb1_mix_lr.mp3" controls></audio></td>
     <td><audio src="audio/liveband_comparison/00220/lbbidir_gen.mp3" controls></audio></td>
     <td><audio src="audio/liveband_comparison/00220/lbbidir_mix_lr.mp3" controls></audio></td>
+    <td class="pad-col"></td>
   </tr>
   <tr>
-    <td class="sample-col">11</td>
+    <td class="sample-col" rowspan="2">11</td>
     <td><audio src="audio/liveband_comparison/00058/input_mix.mp3" controls></audio></td>
     <td><audio src="audio/liveband_comparison/00058/gt_stem.mp3" controls></audio></td>
     <td><audio src="audio/liveband_comparison/00058/gt_mix_lr.mp3" controls></audio></td>
@@ -407,15 +447,18 @@ We compare the internal LiveBand model (0.1s anticipation) with Slakh2100-traine
     <td><audio src="audio/liveband_comparison/00058/internal_mix_lr.mp3" controls></audio></td>
     <td><audio src="audio/liveband_comparison/00058/lb0_gen.mp3" controls></audio></td>
     <td><audio src="audio/liveband_comparison/00058/lb0_mix_lr.mp3" controls></audio></td>
+  </tr>
+  <tr>
     <td><audio src="audio/liveband_comparison/00058/lb01_gen.mp3" controls></audio></td>
     <td><audio src="audio/liveband_comparison/00058/lb01_mix_lr.mp3" controls></audio></td>
     <td><audio src="audio/liveband_comparison/00058/lb1_gen.mp3" controls></audio></td>
     <td><audio src="audio/liveband_comparison/00058/lb1_mix_lr.mp3" controls></audio></td>
     <td><audio src="audio/liveband_comparison/00058/lbbidir_gen.mp3" controls></audio></td>
     <td><audio src="audio/liveband_comparison/00058/lbbidir_mix_lr.mp3" controls></audio></td>
+    <td class="pad-col"></td>
   </tr>
   <tr>
-    <td class="sample-col">12</td>
+    <td class="sample-col" rowspan="2">12</td>
     <td><audio src="audio/liveband_comparison/00669/input_mix.mp3" controls></audio></td>
     <td><audio src="audio/liveband_comparison/00669/gt_stem.mp3" controls></audio></td>
     <td><audio src="audio/liveband_comparison/00669/gt_mix_lr.mp3" controls></audio></td>
@@ -423,15 +466,18 @@ We compare the internal LiveBand model (0.1s anticipation) with Slakh2100-traine
     <td><audio src="audio/liveband_comparison/00669/internal_mix_lr.mp3" controls></audio></td>
     <td><audio src="audio/liveband_comparison/00669/lb0_gen.mp3" controls></audio></td>
     <td><audio src="audio/liveband_comparison/00669/lb0_mix_lr.mp3" controls></audio></td>
+  </tr>
+  <tr>
     <td><audio src="audio/liveband_comparison/00669/lb01_gen.mp3" controls></audio></td>
     <td><audio src="audio/liveband_comparison/00669/lb01_mix_lr.mp3" controls></audio></td>
     <td><audio src="audio/liveband_comparison/00669/lb1_gen.mp3" controls></audio></td>
     <td><audio src="audio/liveband_comparison/00669/lb1_mix_lr.mp3" controls></audio></td>
     <td><audio src="audio/liveband_comparison/00669/lbbidir_gen.mp3" controls></audio></td>
     <td><audio src="audio/liveband_comparison/00669/lbbidir_mix_lr.mp3" controls></audio></td>
+    <td class="pad-col"></td>
   </tr>
   <tr>
-    <td class="sample-col">13</td>
+    <td class="sample-col" rowspan="2">13</td>
     <td><audio src="audio/liveband_comparison/00641/input_mix.mp3" controls></audio></td>
     <td><audio src="audio/liveband_comparison/00641/gt_stem.mp3" controls></audio></td>
     <td><audio src="audio/liveband_comparison/00641/gt_mix_lr.mp3" controls></audio></td>
@@ -439,15 +485,18 @@ We compare the internal LiveBand model (0.1s anticipation) with Slakh2100-traine
     <td><audio src="audio/liveband_comparison/00641/internal_mix_lr.mp3" controls></audio></td>
     <td><audio src="audio/liveband_comparison/00641/lb0_gen.mp3" controls></audio></td>
     <td><audio src="audio/liveband_comparison/00641/lb0_mix_lr.mp3" controls></audio></td>
+  </tr>
+  <tr>
     <td><audio src="audio/liveband_comparison/00641/lb01_gen.mp3" controls></audio></td>
     <td><audio src="audio/liveband_comparison/00641/lb01_mix_lr.mp3" controls></audio></td>
     <td><audio src="audio/liveband_comparison/00641/lb1_gen.mp3" controls></audio></td>
     <td><audio src="audio/liveband_comparison/00641/lb1_mix_lr.mp3" controls></audio></td>
     <td><audio src="audio/liveband_comparison/00641/lbbidir_gen.mp3" controls></audio></td>
     <td><audio src="audio/liveband_comparison/00641/lbbidir_mix_lr.mp3" controls></audio></td>
+    <td class="pad-col"></td>
   </tr>
   <tr>
-    <td class="sample-col">14</td>
+    <td class="sample-col" rowspan="2">14</td>
     <td><audio src="audio/liveband_comparison/00129/input_mix.mp3" controls></audio></td>
     <td><audio src="audio/liveband_comparison/00129/gt_stem.mp3" controls></audio></td>
     <td><audio src="audio/liveband_comparison/00129/gt_mix_lr.mp3" controls></audio></td>
@@ -455,15 +504,18 @@ We compare the internal LiveBand model (0.1s anticipation) with Slakh2100-traine
     <td><audio src="audio/liveband_comparison/00129/internal_mix_lr.mp3" controls></audio></td>
     <td><audio src="audio/liveband_comparison/00129/lb0_gen.mp3" controls></audio></td>
     <td><audio src="audio/liveband_comparison/00129/lb0_mix_lr.mp3" controls></audio></td>
+  </tr>
+  <tr>
     <td><audio src="audio/liveband_comparison/00129/lb01_gen.mp3" controls></audio></td>
     <td><audio src="audio/liveband_comparison/00129/lb01_mix_lr.mp3" controls></audio></td>
     <td><audio src="audio/liveband_comparison/00129/lb1_gen.mp3" controls></audio></td>
     <td><audio src="audio/liveband_comparison/00129/lb1_mix_lr.mp3" controls></audio></td>
     <td><audio src="audio/liveband_comparison/00129/lbbidir_gen.mp3" controls></audio></td>
     <td><audio src="audio/liveband_comparison/00129/lbbidir_mix_lr.mp3" controls></audio></td>
+    <td class="pad-col"></td>
   </tr>
   <tr>
-    <td class="sample-col">15</td>
+    <td class="sample-col" rowspan="2">15</td>
     <td><audio src="audio/liveband_comparison/00962/input_mix.mp3" controls></audio></td>
     <td><audio src="audio/liveband_comparison/00962/gt_stem.mp3" controls></audio></td>
     <td><audio src="audio/liveband_comparison/00962/gt_mix_lr.mp3" controls></audio></td>
@@ -471,15 +523,18 @@ We compare the internal LiveBand model (0.1s anticipation) with Slakh2100-traine
     <td><audio src="audio/liveband_comparison/00962/internal_mix_lr.mp3" controls></audio></td>
     <td><audio src="audio/liveband_comparison/00962/lb0_gen.mp3" controls></audio></td>
     <td><audio src="audio/liveband_comparison/00962/lb0_mix_lr.mp3" controls></audio></td>
+  </tr>
+  <tr>
     <td><audio src="audio/liveband_comparison/00962/lb01_gen.mp3" controls></audio></td>
     <td><audio src="audio/liveband_comparison/00962/lb01_mix_lr.mp3" controls></audio></td>
     <td><audio src="audio/liveband_comparison/00962/lb1_gen.mp3" controls></audio></td>
     <td><audio src="audio/liveband_comparison/00962/lb1_mix_lr.mp3" controls></audio></td>
     <td><audio src="audio/liveband_comparison/00962/lbbidir_gen.mp3" controls></audio></td>
     <td><audio src="audio/liveband_comparison/00962/lbbidir_mix_lr.mp3" controls></audio></td>
+    <td class="pad-col"></td>
   </tr>
   <tr>
-    <td class="sample-col">16</td>
+    <td class="sample-col" rowspan="2">16</td>
     <td><audio src="audio/liveband_comparison/00072/input_mix.mp3" controls></audio></td>
     <td><audio src="audio/liveband_comparison/00072/gt_stem.mp3" controls></audio></td>
     <td><audio src="audio/liveband_comparison/00072/gt_mix_lr.mp3" controls></audio></td>
@@ -487,15 +542,18 @@ We compare the internal LiveBand model (0.1s anticipation) with Slakh2100-traine
     <td><audio src="audio/liveband_comparison/00072/internal_mix_lr.mp3" controls></audio></td>
     <td><audio src="audio/liveband_comparison/00072/lb0_gen.mp3" controls></audio></td>
     <td><audio src="audio/liveband_comparison/00072/lb0_mix_lr.mp3" controls></audio></td>
+  </tr>
+  <tr>
     <td><audio src="audio/liveband_comparison/00072/lb01_gen.mp3" controls></audio></td>
     <td><audio src="audio/liveband_comparison/00072/lb01_mix_lr.mp3" controls></audio></td>
     <td><audio src="audio/liveband_comparison/00072/lb1_gen.mp3" controls></audio></td>
     <td><audio src="audio/liveband_comparison/00072/lb1_mix_lr.mp3" controls></audio></td>
     <td><audio src="audio/liveband_comparison/00072/lbbidir_gen.mp3" controls></audio></td>
     <td><audio src="audio/liveband_comparison/00072/lbbidir_mix_lr.mp3" controls></audio></td>
+    <td class="pad-col"></td>
   </tr>
   <tr>
-    <td class="sample-col">17</td>
+    <td class="sample-col" rowspan="2">17</td>
     <td><audio src="audio/liveband_comparison/00367/input_mix.mp3" controls></audio></td>
     <td><audio src="audio/liveband_comparison/00367/gt_stem.mp3" controls></audio></td>
     <td><audio src="audio/liveband_comparison/00367/gt_mix_lr.mp3" controls></audio></td>
@@ -503,15 +561,18 @@ We compare the internal LiveBand model (0.1s anticipation) with Slakh2100-traine
     <td><audio src="audio/liveband_comparison/00367/internal_mix_lr.mp3" controls></audio></td>
     <td><audio src="audio/liveband_comparison/00367/lb0_gen.mp3" controls></audio></td>
     <td><audio src="audio/liveband_comparison/00367/lb0_mix_lr.mp3" controls></audio></td>
+  </tr>
+  <tr>
     <td><audio src="audio/liveband_comparison/00367/lb01_gen.mp3" controls></audio></td>
     <td><audio src="audio/liveband_comparison/00367/lb01_mix_lr.mp3" controls></audio></td>
     <td><audio src="audio/liveband_comparison/00367/lb1_gen.mp3" controls></audio></td>
     <td><audio src="audio/liveband_comparison/00367/lb1_mix_lr.mp3" controls></audio></td>
     <td><audio src="audio/liveband_comparison/00367/lbbidir_gen.mp3" controls></audio></td>
     <td><audio src="audio/liveband_comparison/00367/lbbidir_mix_lr.mp3" controls></audio></td>
+    <td class="pad-col"></td>
   </tr>
   <tr>
-    <td class="sample-col">18</td>
+    <td class="sample-col" rowspan="2">18</td>
     <td><audio src="audio/liveband_comparison/00393/input_mix.mp3" controls></audio></td>
     <td><audio src="audio/liveband_comparison/00393/gt_stem.mp3" controls></audio></td>
     <td><audio src="audio/liveband_comparison/00393/gt_mix_lr.mp3" controls></audio></td>
@@ -519,15 +580,18 @@ We compare the internal LiveBand model (0.1s anticipation) with Slakh2100-traine
     <td><audio src="audio/liveband_comparison/00393/internal_mix_lr.mp3" controls></audio></td>
     <td><audio src="audio/liveband_comparison/00393/lb0_gen.mp3" controls></audio></td>
     <td><audio src="audio/liveband_comparison/00393/lb0_mix_lr.mp3" controls></audio></td>
+  </tr>
+  <tr>
     <td><audio src="audio/liveband_comparison/00393/lb01_gen.mp3" controls></audio></td>
     <td><audio src="audio/liveband_comparison/00393/lb01_mix_lr.mp3" controls></audio></td>
     <td><audio src="audio/liveband_comparison/00393/lb1_gen.mp3" controls></audio></td>
     <td><audio src="audio/liveband_comparison/00393/lb1_mix_lr.mp3" controls></audio></td>
     <td><audio src="audio/liveband_comparison/00393/lbbidir_gen.mp3" controls></audio></td>
     <td><audio src="audio/liveband_comparison/00393/lbbidir_mix_lr.mp3" controls></audio></td>
+    <td class="pad-col"></td>
   </tr>
   <tr>
-    <td class="sample-col">19</td>
+    <td class="sample-col" rowspan="2">19</td>
     <td><audio src="audio/liveband_comparison/00111/input_mix.mp3" controls></audio></td>
     <td><audio src="audio/liveband_comparison/00111/gt_stem.mp3" controls></audio></td>
     <td><audio src="audio/liveband_comparison/00111/gt_mix_lr.mp3" controls></audio></td>
@@ -535,15 +599,18 @@ We compare the internal LiveBand model (0.1s anticipation) with Slakh2100-traine
     <td><audio src="audio/liveband_comparison/00111/internal_mix_lr.mp3" controls></audio></td>
     <td><audio src="audio/liveband_comparison/00111/lb0_gen.mp3" controls></audio></td>
     <td><audio src="audio/liveband_comparison/00111/lb0_mix_lr.mp3" controls></audio></td>
+  </tr>
+  <tr>
     <td><audio src="audio/liveband_comparison/00111/lb01_gen.mp3" controls></audio></td>
     <td><audio src="audio/liveband_comparison/00111/lb01_mix_lr.mp3" controls></audio></td>
     <td><audio src="audio/liveband_comparison/00111/lb1_gen.mp3" controls></audio></td>
     <td><audio src="audio/liveband_comparison/00111/lb1_mix_lr.mp3" controls></audio></td>
     <td><audio src="audio/liveband_comparison/00111/lbbidir_gen.mp3" controls></audio></td>
     <td><audio src="audio/liveband_comparison/00111/lbbidir_mix_lr.mp3" controls></audio></td>
+    <td class="pad-col"></td>
   </tr>
   <tr>
-    <td class="sample-col">20</td>
+    <td class="sample-col" rowspan="2">20</td>
     <td><audio src="audio/liveband_comparison/00389/input_mix.mp3" controls></audio></td>
     <td><audio src="audio/liveband_comparison/00389/gt_stem.mp3" controls></audio></td>
     <td><audio src="audio/liveband_comparison/00389/gt_mix_lr.mp3" controls></audio></td>
@@ -551,15 +618,18 @@ We compare the internal LiveBand model (0.1s anticipation) with Slakh2100-traine
     <td><audio src="audio/liveband_comparison/00389/internal_mix_lr.mp3" controls></audio></td>
     <td><audio src="audio/liveband_comparison/00389/lb0_gen.mp3" controls></audio></td>
     <td><audio src="audio/liveband_comparison/00389/lb0_mix_lr.mp3" controls></audio></td>
+  </tr>
+  <tr>
     <td><audio src="audio/liveband_comparison/00389/lb01_gen.mp3" controls></audio></td>
     <td><audio src="audio/liveband_comparison/00389/lb01_mix_lr.mp3" controls></audio></td>
     <td><audio src="audio/liveband_comparison/00389/lb1_gen.mp3" controls></audio></td>
     <td><audio src="audio/liveband_comparison/00389/lb1_mix_lr.mp3" controls></audio></td>
     <td><audio src="audio/liveband_comparison/00389/lbbidir_gen.mp3" controls></audio></td>
     <td><audio src="audio/liveband_comparison/00389/lbbidir_mix_lr.mp3" controls></audio></td>
+    <td class="pad-col"></td>
   </tr>
   <tr>
-    <td class="sample-col">21</td>
+    <td class="sample-col" rowspan="2">21</td>
     <td><audio src="audio/liveband_comparison/00708/input_mix.mp3" controls></audio></td>
     <td><audio src="audio/liveband_comparison/00708/gt_stem.mp3" controls></audio></td>
     <td><audio src="audio/liveband_comparison/00708/gt_mix_lr.mp3" controls></audio></td>
@@ -567,15 +637,18 @@ We compare the internal LiveBand model (0.1s anticipation) with Slakh2100-traine
     <td><audio src="audio/liveband_comparison/00708/internal_mix_lr.mp3" controls></audio></td>
     <td><audio src="audio/liveband_comparison/00708/lb0_gen.mp3" controls></audio></td>
     <td><audio src="audio/liveband_comparison/00708/lb0_mix_lr.mp3" controls></audio></td>
+  </tr>
+  <tr>
     <td><audio src="audio/liveband_comparison/00708/lb01_gen.mp3" controls></audio></td>
     <td><audio src="audio/liveband_comparison/00708/lb01_mix_lr.mp3" controls></audio></td>
     <td><audio src="audio/liveband_comparison/00708/lb1_gen.mp3" controls></audio></td>
     <td><audio src="audio/liveband_comparison/00708/lb1_mix_lr.mp3" controls></audio></td>
     <td><audio src="audio/liveband_comparison/00708/lbbidir_gen.mp3" controls></audio></td>
     <td><audio src="audio/liveband_comparison/00708/lbbidir_mix_lr.mp3" controls></audio></td>
+    <td class="pad-col"></td>
   </tr>
   <tr>
-    <td class="sample-col">22</td>
+    <td class="sample-col" rowspan="2">22</td>
     <td><audio src="audio/liveband_comparison/00742/input_mix.mp3" controls></audio></td>
     <td><audio src="audio/liveband_comparison/00742/gt_stem.mp3" controls></audio></td>
     <td><audio src="audio/liveband_comparison/00742/gt_mix_lr.mp3" controls></audio></td>
@@ -583,15 +656,18 @@ We compare the internal LiveBand model (0.1s anticipation) with Slakh2100-traine
     <td><audio src="audio/liveband_comparison/00742/internal_mix_lr.mp3" controls></audio></td>
     <td><audio src="audio/liveband_comparison/00742/lb0_gen.mp3" controls></audio></td>
     <td><audio src="audio/liveband_comparison/00742/lb0_mix_lr.mp3" controls></audio></td>
+  </tr>
+  <tr>
     <td><audio src="audio/liveband_comparison/00742/lb01_gen.mp3" controls></audio></td>
     <td><audio src="audio/liveband_comparison/00742/lb01_mix_lr.mp3" controls></audio></td>
     <td><audio src="audio/liveband_comparison/00742/lb1_gen.mp3" controls></audio></td>
     <td><audio src="audio/liveband_comparison/00742/lb1_mix_lr.mp3" controls></audio></td>
     <td><audio src="audio/liveband_comparison/00742/lbbidir_gen.mp3" controls></audio></td>
     <td><audio src="audio/liveband_comparison/00742/lbbidir_mix_lr.mp3" controls></audio></td>
+    <td class="pad-col"></td>
   </tr>
   <tr>
-    <td class="sample-col">23</td>
+    <td class="sample-col" rowspan="2">23</td>
     <td><audio src="audio/liveband_comparison/00200/input_mix.mp3" controls></audio></td>
     <td><audio src="audio/liveband_comparison/00200/gt_stem.mp3" controls></audio></td>
     <td><audio src="audio/liveband_comparison/00200/gt_mix_lr.mp3" controls></audio></td>
@@ -599,15 +675,18 @@ We compare the internal LiveBand model (0.1s anticipation) with Slakh2100-traine
     <td><audio src="audio/liveband_comparison/00200/internal_mix_lr.mp3" controls></audio></td>
     <td><audio src="audio/liveband_comparison/00200/lb0_gen.mp3" controls></audio></td>
     <td><audio src="audio/liveband_comparison/00200/lb0_mix_lr.mp3" controls></audio></td>
+  </tr>
+  <tr>
     <td><audio src="audio/liveband_comparison/00200/lb01_gen.mp3" controls></audio></td>
     <td><audio src="audio/liveband_comparison/00200/lb01_mix_lr.mp3" controls></audio></td>
     <td><audio src="audio/liveband_comparison/00200/lb1_gen.mp3" controls></audio></td>
     <td><audio src="audio/liveband_comparison/00200/lb1_mix_lr.mp3" controls></audio></td>
     <td><audio src="audio/liveband_comparison/00200/lbbidir_gen.mp3" controls></audio></td>
     <td><audio src="audio/liveband_comparison/00200/lbbidir_mix_lr.mp3" controls></audio></td>
+    <td class="pad-col"></td>
   </tr>
   <tr>
-    <td class="sample-col">24</td>
+    <td class="sample-col" rowspan="2">24</td>
     <td><audio src="audio/liveband_comparison/00833/input_mix.mp3" controls></audio></td>
     <td><audio src="audio/liveband_comparison/00833/gt_stem.mp3" controls></audio></td>
     <td><audio src="audio/liveband_comparison/00833/gt_mix_lr.mp3" controls></audio></td>
@@ -615,15 +694,18 @@ We compare the internal LiveBand model (0.1s anticipation) with Slakh2100-traine
     <td><audio src="audio/liveband_comparison/00833/internal_mix_lr.mp3" controls></audio></td>
     <td><audio src="audio/liveband_comparison/00833/lb0_gen.mp3" controls></audio></td>
     <td><audio src="audio/liveband_comparison/00833/lb0_mix_lr.mp3" controls></audio></td>
+  </tr>
+  <tr>
     <td><audio src="audio/liveband_comparison/00833/lb01_gen.mp3" controls></audio></td>
     <td><audio src="audio/liveband_comparison/00833/lb01_mix_lr.mp3" controls></audio></td>
     <td><audio src="audio/liveband_comparison/00833/lb1_gen.mp3" controls></audio></td>
     <td><audio src="audio/liveband_comparison/00833/lb1_mix_lr.mp3" controls></audio></td>
     <td><audio src="audio/liveband_comparison/00833/lbbidir_gen.mp3" controls></audio></td>
     <td><audio src="audio/liveband_comparison/00833/lbbidir_mix_lr.mp3" controls></audio></td>
+    <td class="pad-col"></td>
   </tr>
   <tr>
-    <td class="sample-col">25</td>
+    <td class="sample-col" rowspan="2">25</td>
     <td><audio src="audio/liveband_comparison/00607/input_mix.mp3" controls></audio></td>
     <td><audio src="audio/liveband_comparison/00607/gt_stem.mp3" controls></audio></td>
     <td><audio src="audio/liveband_comparison/00607/gt_mix_lr.mp3" controls></audio></td>
@@ -631,15 +713,18 @@ We compare the internal LiveBand model (0.1s anticipation) with Slakh2100-traine
     <td><audio src="audio/liveband_comparison/00607/internal_mix_lr.mp3" controls></audio></td>
     <td><audio src="audio/liveband_comparison/00607/lb0_gen.mp3" controls></audio></td>
     <td><audio src="audio/liveband_comparison/00607/lb0_mix_lr.mp3" controls></audio></td>
+  </tr>
+  <tr>
     <td><audio src="audio/liveband_comparison/00607/lb01_gen.mp3" controls></audio></td>
     <td><audio src="audio/liveband_comparison/00607/lb01_mix_lr.mp3" controls></audio></td>
     <td><audio src="audio/liveband_comparison/00607/lb1_gen.mp3" controls></audio></td>
     <td><audio src="audio/liveband_comparison/00607/lb1_mix_lr.mp3" controls></audio></td>
     <td><audio src="audio/liveband_comparison/00607/lbbidir_gen.mp3" controls></audio></td>
     <td><audio src="audio/liveband_comparison/00607/lbbidir_mix_lr.mp3" controls></audio></td>
+    <td class="pad-col"></td>
   </tr>
   <tr>
-    <td class="sample-col">26</td>
+    <td class="sample-col" rowspan="2">26</td>
     <td><audio src="audio/liveband_comparison/00587/input_mix.mp3" controls></audio></td>
     <td><audio src="audio/liveband_comparison/00587/gt_stem.mp3" controls></audio></td>
     <td><audio src="audio/liveband_comparison/00587/gt_mix_lr.mp3" controls></audio></td>
@@ -647,12 +732,15 @@ We compare the internal LiveBand model (0.1s anticipation) with Slakh2100-traine
     <td><audio src="audio/liveband_comparison/00587/internal_mix_lr.mp3" controls></audio></td>
     <td><audio src="audio/liveband_comparison/00587/lb0_gen.mp3" controls></audio></td>
     <td><audio src="audio/liveband_comparison/00587/lb0_mix_lr.mp3" controls></audio></td>
+  </tr>
+  <tr>
     <td><audio src="audio/liveband_comparison/00587/lb01_gen.mp3" controls></audio></td>
     <td><audio src="audio/liveband_comparison/00587/lb01_mix_lr.mp3" controls></audio></td>
     <td><audio src="audio/liveband_comparison/00587/lb1_gen.mp3" controls></audio></td>
     <td><audio src="audio/liveband_comparison/00587/lb1_mix_lr.mp3" controls></audio></td>
     <td><audio src="audio/liveband_comparison/00587/lbbidir_gen.mp3" controls></audio></td>
     <td><audio src="audio/liveband_comparison/00587/lbbidir_mix_lr.mp3" controls></audio></td>
+    <td class="pad-col"></td>
   </tr>
 </table>
 </div>
