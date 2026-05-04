@@ -3,8 +3,14 @@ layout: page
 ---
 
 <style>
+/* 1. Expand the max-width of common GitHub Pages theme containers */
+.wrapper, .main-content, .container {
+  max-width: 95% !important;
+}
+
+/* 2. Allow horizontal scrolling on smaller screens so the page doesn't break */
 .demo-table-wrap {
-  overflow-x: visible;
+  overflow-x: auto;
 }
 
 .demo-table {
@@ -20,10 +26,11 @@ layout: page
   text-align: center;
 }
 
+/* 3. Give audio widgets a min-width so the play button is ALWAYS visible */
 .demo-table audio {
   width: 100%;
+  min-width: 150px; 
 }
-
 
 .sample-col {
   font-weight: 600;
